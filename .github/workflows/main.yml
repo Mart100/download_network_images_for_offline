@@ -17,6 +17,9 @@ jobs:
       
     - name: Install dependencies 
       run: flutter pub get
+    
+    - name: Dart formatting
+      run: flutter dartfmt ./
       
     - name: Test app 
       run: flutter test --coverage
