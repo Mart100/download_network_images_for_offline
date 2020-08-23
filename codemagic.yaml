@@ -1,0 +1,10 @@
+# Check out https://docs.codemagic.io/yaml/yaml/ for more information
+
+workflows:
+    flutter-package:
+        name: Download network images for offline
+        environment:
+            flutter: dev
+        scripts:
+            - flutter packages pub get
+            - flutter test
