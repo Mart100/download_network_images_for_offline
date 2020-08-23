@@ -1,6 +1,6 @@
 name: download_network_images_for_offline
 description: A sipmle flutter package that saves network images for whenever the user is offline
-version: 0.0.3
+version: 0.0.4
 author:
 homepage:
 

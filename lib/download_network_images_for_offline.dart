@@ -29,9 +29,13 @@ class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
   ImageProvider imageProvider = AssetImage('assets/placeholder.gif');
 
   @override
-  void initState() async {
+  void initState() {
     super.initState();
 
+    loadImage();
+  }
+
+  void loadImage() async {
     ConnectivityResult connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
       isOffline = true;
