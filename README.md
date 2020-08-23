@@ -21,14 +21,14 @@ You can return a widget that requires the imageProvider.
 
 
 
-##Install:
+## Install:
 Add to pubspec.yaml dependencies:
 ```yaml
 dependencies:
-	download_network_images_for_offline: ^0.0.4
+ download_network_images_for_offline: ^0.0.4
 ```
 
-##Example:
+## Example:
 
 ```dart
 ListView(
