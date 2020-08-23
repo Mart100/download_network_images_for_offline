@@ -1,6 +1,7 @@
 library download_network_images_for_offline;
 
 import 'dart:io';
+import 'package:http/http.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,8 @@ class NetworkImageForOffline extends StatefulWidget {
   const NetworkImageForOffline({
     @required this.file,
     @required this.url,
-    this.debug = false,
     @required this.imageBuilder,
+    this.debug = false,
   });
 
   @override
@@ -25,7 +26,7 @@ typedef _ImageBuilderType<T>(BuildContext context, ImageProvider imageProvider);
 
 class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
   bool isOffline;
-  ImageProvider imageProvider;
+  ImageProvider imageProvider = AssetImage('assets/placeholder.gif');
 
   @override
   void initState() async {
@@ -50,6 +51,11 @@ class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
       setState(() {
         imageProvider = NetworkImage(widget.url);
       });
+
+      if (await widget.file.exists() == false) {
+        Response response = await get(widget.url);
+        widget.file.writeAsBytesSync(response.bodyBytes);
+      }
     }
   }
 
