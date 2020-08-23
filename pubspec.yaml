@@ -1,6 +1,6 @@
 name: download_network_images_for_offline
 description: A simple flutter package that saves network images for whenever the user is offline
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Mart100/download_network_images_for_offline
 repository: https://github.com/Mart100/download_network_images_for_offline
 
@@ -16,7 +16,7 @@ dependencies:
   http: ^0.12.2
 
 dev_dependencies:
-  flutter_test:
+  flutter_test: 
     sdk: flutter
 
 flutter:

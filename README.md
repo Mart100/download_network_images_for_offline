@@ -1,13 +1,13 @@
 # download_network_images_for_offline
 
 A flutter plugin to use Network Images and store them locally incase the user is offline.
-#### In more detail:
+### In more detail:
 NetworkImageForOffline will check for internet access, 
 when it has internet access it will use the networkImage and download the file if it has not been downloaded yet.
 If internet access is not available it will use the downloaded file, when that file was not installed yet it will show a loading placeholder.
 
 
-#### Arguments:
+### Arguments:
 This package provides the NetworkImageForOffline package,
 It takes 3 required arguments: file, url, imageBuilder
 
