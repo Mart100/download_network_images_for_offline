@@ -1,5 +1,7 @@
 # download_network_images_for_offline
 
+[![Build Status](https://github.com/Mart100/download_network_images_for_offline/workflows/build/badge.svg?branch=master)](https://github.com/Mart100/download_network_images_for_offline/actions?query=workflow%3A"build"+branch%3Amaster)
+
 A flutter plugin to use Network Images and store them locally incase the user is offline.
 ### In more detail:
 NetworkImageForOffline will check for internet access, 
