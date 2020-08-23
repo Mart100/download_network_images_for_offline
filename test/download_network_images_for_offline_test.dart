@@ -15,7 +15,8 @@ void main() {
               NetworkImageForOffline(
                 file: File('./'),
                 url: 'https://i.imgur.com/5o2jOe0.png',
-                imageBuilder: (BuildContext context, ImageProvider imageProvider) {
+                imageBuilder:
+                    (BuildContext context, ImageProvider imageProvider) {
                   return ListTile(
                     leading: CircleAvatar(
                       backgroundImage: imageProvider,

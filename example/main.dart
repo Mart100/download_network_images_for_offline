@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
             return NetworkImageForOffline(
               file: File('./offlineImages/$imageID.jpeg'),
               url: 'https://i.imgur.com/$imageID.png',
-              imageBuilder: (BuildContext context, ImageProvider imageProvider) {
+              imageBuilder:
+                  (BuildContext context, ImageProvider imageProvider) {
                 return ListTile(
                   leading: CircleAvatar(
                     backgroundImage: imageProvider,

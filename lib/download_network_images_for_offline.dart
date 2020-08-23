@@ -36,7 +36,8 @@ class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
   }
 
   void loadImage() async {
-    ConnectivityResult connectivityResult = await (Connectivity().checkConnectivity());
+    ConnectivityResult connectivityResult =
+        await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
       isOffline = true;
     } else {
@@ -49,7 +50,8 @@ class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
           imageProvider = Image.file(widget.file).image;
         });
       } else {
-        if (widget.debug) print('ERR: Offline and file ${widget.file} not found!');
+        if (widget.debug)
+          print('ERR: Offline and file ${widget.file} not found!');
       }
     } else if (!isOffline) {
       setState(() {
