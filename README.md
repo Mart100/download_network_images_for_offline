@@ -28,23 +28,19 @@ dependencies:
  download_network_images_for_offline: ^0.0.4
 ```
 
-## Example:
+## Usage:
 
 ```dart
-ListView(
- children: <Widget>[
-  NetworkImageForOffline(
-   file: File('./'),
-   url: 'https://i.imgur.com/ViZKPUs.jpeg',
-   imageBuilder: (BuildContext context, ImageProvider imageProvider) {
-    return ListTile(
-     leading: CircleAvatar(
-      backgroundImage: imageProvider,
-     ),
-     title: Text('Hello'),
-    );
-   },
-  ),
- ],
+NetworkImageForOffline(
+ file: File('./'),
+ url: 'https://i.imgur.com/ViZKPUs.jpeg',
+ imageBuilder: (BuildContext context, ImageProvider imageProvider) {
+  return ListTile(
+   leading: CircleAvatar(
+    backgroundImage: imageProvider,
+   ),
+   title: Text('Hello'),
+  );
+ },
 ),
 ```
