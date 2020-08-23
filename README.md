@@ -1,14 +1,50 @@
 # download_network_images_for_offline
 
-A new Flutter package project.
+A flutter plugin to use Network Images and store them locally incase the user is offline.
+#### In more detail:
+NetworkImageForOffline will check for internet access, 
+when it has internet access it will use the networkImage and download the file if it has not been downloaded yet.
+If internet access is not available it will use the downloaded file, when that file was not installed yet it will show a loading placeholder.
 
-## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+#### Arguments:
+This package provides the NetworkImageForOffline package,
+It takes 3 required arguments: file, url, imageBuilder
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+The file arguments takes a File class, the file defines where it should download the image.
+
+The url argument takes a simple string to where the network image is defined.
+
+The imageBuilder takes a function that returns 2 arguments (context, ImageProvider)
+You can return a widget that requires the imageProvider.
+
+
+
+
+##Install:
+Add to pubspec.yaml dependencies:
+```yaml
+dependencies:
+	download_network_images_for_offline: ^0.0.4
+```
+
+##Example:
+
+```dart
+ListView(
+ children: <Widget>[
+  NetworkImageForOffline(
+   file: File('./'),
+   url: 'https://i.imgur.com/ViZKPUs.jpeg',
+   imageBuilder: (BuildContext context, ImageProvider imageProvider) {
+    return ListTile(
+     leading: CircleAvatar(
+      backgroundImage: imageProvider,
+     ),
+     title: Text('Hello'),
+    );
+   },
+  ),
+ ],
+),
+```
