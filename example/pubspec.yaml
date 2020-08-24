@@ -12,8 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  connectivity: '>=0.4.9+2 <2.0.0'
-  http: ^0.12.2
   path_provider: ^1.6.14
   download_network_images_for_offline: ^0.0.1
 
