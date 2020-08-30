@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             String imageID = images[index];
 
             return NetworkImageForOffline(
-              file: File('./offlineImages/$imageID.jpeg'),
+              file: File('$externalStorageDir/offlineImages/$imageID.jpeg'),
               url: 'https://i.imgur.com/$imageID.png',
               imageBuilder: (BuildContext context, ImageProvider imageProvider) {
                 return ListTile(

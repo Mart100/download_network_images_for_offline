@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.4] - 30 AUG
+- Better documentation
+
 ## [0.0.3] - 24 AUG
 - fixed Example
 
