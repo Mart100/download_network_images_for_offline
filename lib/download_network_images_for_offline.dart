@@ -71,7 +71,7 @@ class _NetworkImageForOfflineState extends State<NetworkImageForOffline> {
 
       // download image if not downloaded yet
       if (await widget.file.exists() == false) {
-        Response response = await get(widget.url);
+        Response response = await get(Uri.parse(widget.url));
         widget.file.writeAsBytesSync(response.bodyBytes);
       }
     }
